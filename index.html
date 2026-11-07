@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+
+
+
+<body id="pagina">
+
+<!-- Esto es el formulario de  ingreso-->
+   
+        <label for="">Nombre:</label>
+
+        <input type="text" name="" id="nom1">
+
+        <br>
+
+        <label for="">Telefono:</label>
+
+        <input type="number" name="" id="">
+
+        <br>
+        <label for="">Sume (8+16) y diga el resultado</label>
+
+        <br>
+        <input type="number" name="" id="numeroResultado">
+
+        <br>
+
+        <div id="mensajePantalla">MENSAJE</div>
+
+        <button onclick="mostrarNombre();verificaValor();">Ingresar</button>
+
+        
+</body>
+<script>
+
+
+    
+
+    function mostrarNombre()
+    {
+        Nom=document.getElementById("nom1").value;
+        
+        alert("Hola como estas :"+Nom);
+    }
+
+    function verificaValor()
+    {
+        resultado=document.getElementById("numeroResultado").value;
+
+        if(resultado==24)
+        {
+            //alert("correcto")
+
+            document.getElementById("pagina").style.setProperty("background-color", 'green');
+
+            mensaje="CORRECTO";
+
+            document.getElementById("mensajePantalla").innerHTML=mensaje;
+
+        }
+        else
+        {
+          //  alert("ERROR")
+            document.getElementById("pagina").style.backgroundColor="red";
+
+            mensaje="Error";
+
+            document.getElementById("mensajePantalla").innerHTML=mensaje;
+
+            
+
+        }
+
+    }
+
+</script>
+</html>
